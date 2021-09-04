@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Final Bill</title>
+</head>
+<body>
+    <p class=finalbill> 
+
+    </p>
+   <script>
+       // Have the user input their bill.
+    var bill = prompt("Please enter the bill amount!");
+        //Calculate the taxed bill, which is the inputted bill plus tax. Tax is 7%.
+    var bill_plus_tax = bill * 7 / 100;
+    //alert(bill_plus_tax)
+    var taxed_bill = +bill +bill_plus_tax;
+    //alert(taxed_bill)
+        // Calculate the tip from the taxed bill. The tip is 5% of the taxed bill.
+    var  taxed_bill_plus_tip= taxed_bill * 5 /100 ;
+    //alert(taxed_bill_plus_tip)
+        // Calculate the final bill total, which is the taxed bill plus the tip value.
+    var your_final_bill= +taxed_bill +taxed_bill_plus_tip;
+    //alert(your_final_bill)
+        // Output the final bill total.
+    var total = document.querySelector(".finalbill")
+    total.innerHTML= ("Your final bill is $"+ your_final_bill)
+    
+
+    </script>
+
+</body>
+</html>
