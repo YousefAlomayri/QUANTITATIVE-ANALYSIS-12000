@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment#3 </title>
+</head>
+<body>
+        <p class="total"></p>
+        <p class="error"></p>
+        <p class="end"></p>
+        
+
+    <script>
+
+    let user_first_number = prompt ("Please Enter the First Number.");
+    user_first_number= parseInt(user_first_number);
+    console.log(user_first_number);
+        if (!(isNaN(user_first_number))){
+
+            let user_operators_input = prompt ("Please Choose an Operator (+, - , * , / ).");
+            console.log(user_operators_input)
+
+
+                if (user_operators_input == "+"||user_operators_input == "-"  ||user_operators_input == "*"  ||user_operators_input == "/"){
+                    let user_second_number= prompt ( " Please Enter the Second Number.");
+                    user_second_number= parseInt(user_second_number);
+                    console.log(user_second_number);
+
+                        if (!(isNaN(user_second_number))){ 
+
+                
+                            switch( user_operators_input ) {
+                            case "+": 
+                            let addition = user_first_number + user_second_number;
+                            var total = document.querySelector(".total");
+                            total.innerHTML= (" The answer is " + addition);
+                            console.log("addition ="+addition)
+                            break;
+
+                            case "-":
+                            let subtraction = user_first_number - user_second_number;
+                            var total = document.querySelector(".total");
+                            total.innerHTML= (" The answer is " + subtraction);
+                            console.log("subtraction ="+subtraction);
+                            break;
+
+                            case "*":
+                            let multipli = user_first_number * user_second_number;
+                            var total = document.querySelector(".total");
+                            total.innerHTML= (" The answer is " + multipli);
+                            console.log("multipli ="+ multipli);
+                            break;
+
+                            case "/":
+                            let division = user_first_number / user_second_number;
+                            var total = document.querySelector(".total");
+                            total.innerHTML= (" The answer is " + division);
+                            console.log("division ="+ division);
+                            break; 
+                            }
+                        }
+                        else {
+                            var error = document.querySelector(".error");
+                            error.innerHTML= ("Your second number is an invalid number.");
+                            console.log("Your second number is an invalid number.")
+
+                            var end = document.querySelector(".end");
+                            end.innerHTML= ("End the program");
+                            console.log("End the program")  
+                        } 
+                }
+                else {
+                    var error = document.querySelector(".error");
+                    error.innerHTML= ("Your input is invalid, Please Choose one of these Operators (+ , - , * , / )");
+                    console.log("Your input is invalid, Please Choose one of these Operators (+ , - , * , / )");
+
+                    var end = document.querySelector(".end");
+                    end.innerHTML= ("End the program");
+                    console.log("End the program");
+                }
+                
+                
+        }    
+        else {
+
+            var error = document.querySelector(".error");
+            error.innerHTML= ("Your first number is an invalid number.");
+            console.log("Your first number is an invalid number.");
+
+            var end = document.querySelector(".end");
+            end.innerHTML= ("End the program");
+            console.log("End the program");
+        }            
+</script> 
+
+    
+</body>
+</html>
+
